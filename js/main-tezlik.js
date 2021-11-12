@@ -48,28 +48,23 @@ elForm.addEventListener('submit', function(evt){
   var elDistanceInput = elForm.querySelector(".distance__input").value.trim();
   
   if (elDistanceInput <= 0){
-    alert("'Please enter only positive numbers!")
-  }else{
-    // var byWalk = (elDistanceInput / walkSpeed)  + " h " + Math.floor(elDistanceInput/ walkSpeed)  60 + " mine " ;
-    // var byBike = Math.floor(elDistanceInput/ bikeSpeed)  + " h " + Math.floor(elDistanceInput/ bikeSpeed) % 60 + " mine " ;
-    // var byCar = Math.floor(elDistanceInput/ carSpeed)+ " h " + Math.floor(elDistanceInput/ carSpeed) % 60 + " mine " ;
-    // var byPlane = Math.floor(elDistanceInput/ planeSpeed)  + " h " + Math.floor(elDistanceInput/ planeSpeed) % 60 + " mine " ;
-    
+    alert("xato!")
+  }else{    
     var bayBikeHour = elDistanceInput / bikeSpeed;
-    var bayBikeMinut = Math.ceil((bayBikeHour - Math.floor(bayBikeHour))*60 )
-    var bayBikeSekund = Math.floor((bayBikeMinut) * 60);
+    var bayBikeMinut = Math.floor((bayBikeHour - Math.floor(bayBikeHour)) * 60 )
+    var bayBikeSekund = Math.ceil(((bayBikeHour - Math.floor(bayBikeHour)) * 60 - bayBikeMinut )* 60 );
 
     var bayWalkeHour = elDistanceInput / walkSpeed;
-    var bayWalkeMinut = Math.ceil((bayWalkeHour - Math.floor(bayWalkeHour))*60 )
-    var bayWalkeSekund = Math.floor((bayWalkeMinut) * 60);
+    var bayWalkeMinut = Math.floor((bayWalkeHour - Math.floor(bayWalkeHour))*60 )
+    var bayWalkeSekund = Math.ceil(((bayWalkeHour - Math.floor(bayWalkeHour)) * 60 - bayWalkeMinut)* 60)  ;
 
     var bayCarHour = elDistanceInput / carSpeed;
-    var bayCarMinut = Math.ceil((bayCarHour - Math.floor(bayCarHour))*60 )
-    var bayCarSekund = Math.floor((bayCarMinut) * 60);
+    var bayCarMinut = Math.floor((bayCarHour - Math.floor(bayCarHour))*60 )
+    var bayCarSekund = Math.ceil(((bayCarHour - Math.floor(bayCarHour))*60 - bayCarMinut) * 60);
 
     var bayPlaneHour = elDistanceInput / planeSpeed;
-    var bayPlaneMinut = Math.ceil((bayPlaneHour - Math.floor(bayPlaneHour))*60 )
-    var bayPlaneSekund = Math.floor((bayPlaneMinut) * 60);
+    var bayPlaneMinut = Math.floor((bayPlaneHour - Math.floor(bayPlaneHour))*60 )
+    var bayPlaneSekund = Math.ceil(((bayPlaneHour - Math.floor(bayPlaneHour))*60 - bayPlaneMinut)*60) ;
     
     // bu cosole.log dagi ifodasi :
     
@@ -80,7 +75,6 @@ elForm.addEventListener('submit', function(evt){
     
     // bu text.Content :
 
-    
     elRezultWalk.textContent = Math.floor(bayWalkeHour) + " h  " + bayWalkeMinut + " min " + bayWalkeSekund + " sekund ";
     elRezultBike.textContent = Math.floor(bayBikeHour) + " h " + bayBikeMinut + " min " + bayBikeSekund + " sekund " ;
     elRezultCar.textContent = Math.floor(bayCarHour) + " h " + bayCarMinut + " min "  + bayCarSekund + " sekund ";

@@ -25,9 +25,15 @@ body{
 }
 .distance__button{
  padding: 5px 25px;
- border: 2px solid rgb(255, 217, 0);
+ border: 2px solid rgb(17, 0, 255);
  background-color: #ffffff;
- color: rgb(255, 196, 0);
+ color: rgb(8, 82, 219);
+}
+
+.distance__button:hover{
+ background-color: blue;
+ color: #ffffff;
+ cursor: pointer;
 }
 
 .raw{
@@ -44,8 +50,9 @@ body{
 }
 .rounded{
  margin-top: 20px;
- background-color: rgb(209, 148, 35);
+ background-color: rgb(118, 223, 123);
  border-radius: 10px;
+ border: 3px solid blue;
 }
 img{
  padding: 20px 50px;
@@ -58,26 +65,34 @@ img{
  padding-bottom: 10px;
  padding-left: 10px;
  padding-right: 19px;
- color: rgb(5, 50, 255);
+ color: rgb(0, 0, 0);
+ font-family: cursive;
+ font-size: bold;
 }
 .result-bike{
  text-align: center;
  padding-bottom: 10px;
  padding-left: 10px;
  padding-right: 19px;
- color: rgb(5, 50, 255);
+ color: rgb(0, 0, 0);
+ font-family: cursive;
+ font-size: bold;
 }
 .result-car{
  text-align: center;
  padding-bottom: 10px;
  padding-left: 10px;
  padding-right: 19px;
- color: rgb(5, 50, 255);
+ color: rgb(0, 0, 0);
+ font-family: cursive;
+ font-size: bold;
 }
 .result-plance{
  text-align: center;
  padding-bottom: 10px;
  padding-left: 10px;
  padding-right: 19px;
- color: rgb(5, 50, 255);
+ color: rgb(0, 0, 0);
+ font-family: cursive;
+ font-size: bold;
 }

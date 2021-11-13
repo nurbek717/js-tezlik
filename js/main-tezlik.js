@@ -32,6 +32,7 @@
 
 
 var elForm = document.querySelector(".form");
+var elInput = document.querySelector(".distance__input")
 var elRezultWalk = document.querySelector(".result-walk");
 var elRezultBike = document.querySelector(".result-bike");
 var elRezultCar = document.querySelector(".result-car");
@@ -45,10 +46,15 @@ var planeSpeed = 800;
 elForm.addEventListener('submit', function(evt){
   evt.preventDefault()
   
-  var elDistanceInput = elForm.querySelector(".distance__input").value.trim();
+  var elDistanceInput = elInput.value.trim();
   
   if (elDistanceInput <= 0){
     alert("xato!")
+    elRezultWalk.textContent = "xato son kiritingiz iltimos sonni to'g'ri kiriting!"
+    elRezultBike.textContent = "xato son kiritingiz iltimos sonni to'g'ri kiriting!"
+    elRezultCar.textContent = "xato son kiritingiz iltimos sonni to'g'ri kiriting!"
+    elRezultPlance.textContent = "xato son kiritingiz iltimos sonni to'g'ri kiriting!"
+
   }else{    
     var bayBikeHour = elDistanceInput / bikeSpeed;
     var bayBikeMinut = Math.floor((bayBikeHour - Math.floor(bayBikeHour)) * 60 )
